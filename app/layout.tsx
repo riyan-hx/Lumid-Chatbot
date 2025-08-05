@@ -17,11 +17,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // ✅ Add this console log to confirm deployment
+  console.log("✅ Vercel Analytics is active in layout.tsx");
+
   return (
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <Analytics /> {/* ✅ Perfect placement */}
+        <Analytics />
       </body>
     </html>
   )
