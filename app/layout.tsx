@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Lumid - Emotional AI Assistant",
   description: "Your personal emotional AI companion for mental wellbeing and support",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -19,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}<Analytics /></body>
+      <body className={inter.className}>
+        {children}
+        <Analytics /> {/* ✅ Perfect placement */}
+      </body>
     </html>
   )
 }
